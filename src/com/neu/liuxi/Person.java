@@ -22,7 +22,8 @@ public class Person {
     public void publicMethod() {
         System.out.println("I'm a public method");
     }
-    private void privateMethod() {
+    @SuppressWarnings("unused")
+	private void privateMethod() {
         System.out.println("I'm a private method");
     }
 }

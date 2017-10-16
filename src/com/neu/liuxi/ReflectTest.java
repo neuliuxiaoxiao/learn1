@@ -36,14 +36,18 @@ public class ReflectTest {
         	System.out.println("Method="+Modifier.toString(method.getModifiers())+" "+method.getReturnType().getSimpleName()+" "+method.getName());
         }
         
-        //使用invoke调用方法
-        person2.getDeclaredMethod("staticMethod",String.class).invoke(person2.getInterfaces(),"jack");
-        
-        
         //构造函数
 		Constructor<?>[] constructors = person2.getDeclaredConstructors();
         for (Constructor<?> constructor : constructors) {
         	System.out.println("Constructor="+Modifier.toString(constructor.getModifiers())+" "+constructor.getName());
         }
+        
+        //使用invoke调用方法
+        person2.getDeclaredMethod("staticMethod",String.class).invoke(null,"jack");
+        Method method = person2.getDeclaredMethod("privateMethod");
+        //AccessibleObject 类是 Field、Method 和 Constructor 对象的基类。
+        //它提供了将反射的对象标记为在使用时取消默认 Java 语言访问控制检查的能力。
+        method.setAccessible(true);
+        method.invoke(new Person());
 	}
 }

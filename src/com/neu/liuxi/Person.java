@@ -17,7 +17,7 @@ public class Person {
 		this.id = id;
 	}
     public static void staticMethod(String devName) {
-        System.out.printf("Hi %s, I'm a static method", devName);
+        System.out.printf("Hi %s, I'm a static method\n", devName);
     }
     public void publicMethod() {
         System.out.println("I'm a public method");

@@ -7,19 +7,14 @@ package com.neu.liuxi;
  * @date 2017年10月16日
  */
 public class ClassLoaderTest {
-	public  void print(){
-		System.out.println("Hello,I'm Hello");
-	}
-
 	public static void main(String[] args) throws ClassNotFoundException
 	{
-		 	Class<?> clazz = Class.forName("com.juvenxu.mvnbook.helloworld.HelloWorld");
+		 	Class<?> clazz = Class.forName("com.neu.liuxi.Person");
 		    ClassLoader classLoader = clazz.getClassLoader();
-		    
-		    System.out.printf("ClassLoader is %s", classLoader.getClass().getSimpleName());
+		    System.out.println("ClassLoader is "+classLoader.getClass().getSimpleName());
 		    while(classLoader.getParent()!=null){
 		    	classLoader = classLoader.getParent();
-		    	System.out.println("Parent is ="+classLoader.getClass().getSimpleName());
+		    	System.out.println("Parent ClassLoader is "+classLoader.getClass().getSimpleName());
 		    }
 	}
 }

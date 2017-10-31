@@ -32,5 +32,9 @@ public class Parcell {
 		Parcell q = new Parcell();
 		Parcell.Contents c = q.contents();
 		Parcell.Destination d = q.to("Borneo");
+		
+		Parcell p3 = new Parcell();
+		Parcell.Contents c1= p.new Contents();
+		Parcell.Destination d1 = p.new Destination("Tasmania");
 	}
 }

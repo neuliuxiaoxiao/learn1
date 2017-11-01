@@ -1,6 +1,9 @@
 package com.neu.liuxi;
-public class Person {
 
+import java.io.Serializable;
+
+public class Person implements Serializable{
+	private static final long serialVersionUID = 1L;
 	public String name;
 	private int id;
 	public Person(){

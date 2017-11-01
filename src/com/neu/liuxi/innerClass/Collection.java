@@ -17,7 +17,7 @@ public class Collection {
 			Integer x = xx.next();
 			System.out.println(x);
 		}
-		Collections.addAll(c, elements)
+		//Collections.addAll(c, elements)
 	/*	List<Integer> b = a.subList(0, 1);
 		b.remove(0);
 		System.out.println(a);*/
